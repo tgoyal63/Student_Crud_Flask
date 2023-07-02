@@ -53,7 +53,7 @@ pip install -r requirements.txt
 You need to create a `.env` file in the root directory and set the `SQLALCHEMY_DATABASE_URI` variable:
 
 ```
-SQLALCHEMY_DATABASE_URI=your_database_uri_here
+SQLALCHEMY_DATABASE_URI=your_postgresql_uri_here
 ```
 
 ### Running the Application
@@ -65,11 +65,3 @@ python app.py
 ```
 
 Open a web browser and navigate to `http://127.0.0.1:5000` to see the application running.
-
-## Contributing
-
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details
