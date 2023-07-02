@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+      }
+
+      form {
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      table {
+        width: 20%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Form</h1>
+    <form id="student-form" method="POST">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" /><br />
+      <label for="college">College:</label><br />
+      <input type="text" id="college" name="college" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <h2>Students</h2>
+    <div id="students-list">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>College</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+          <td>{{ student.name }}</td>
+          <td>{{ student.college }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <script>
+      $("#student-form").submit(function (event) {
+        event.preventDefault();
+
+        var form = $(this);
+        var url = form.attr("action");
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: form.serialize(),
+          success: function (data) {
+            alert("Student added successfully!");
+            location.reload();
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

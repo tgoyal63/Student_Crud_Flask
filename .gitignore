@@ -1,0 +1,30 @@
+# .gitignore
+
+# Ignore the virtual environment directory
+venv/
+__pycache__/
+
+# Ignore the database file
+*.db
+
+# Ignore the .env file
+.env
+
+# Ignore any log files
+*.log
+
+# Ignore any compiled Python files
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+
+# Ignore any distribution / packaging artifacts
+dist/
+build/
+*.egg-info/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+.git/
