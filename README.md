@@ -8,7 +8,7 @@ These instructions will help you get a copy of the project up and running on you
 
 ### Prerequisites
 
-You need Python 3.8 or later to run this app. You can have multiple Python versions (2.x and 3.x) installed on the same system without problems. 
+You need Python 3.7 or later to run this app. You can have multiple Python versions (2.x and 3.x) installed on the same system without problems. 
 
 In Ubuntu, Mint and Debian you can install Python 3 like this:
 
