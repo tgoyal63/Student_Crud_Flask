@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 ### Configuration
 
-You need to create a `.env` file in the root directory and set the `SQLALCHEMY_DATABASE_URI` variable:
+You need to rename `demo.env` file as `.env` file in the root directory and set the `SQLALCHEMY_DATABASE_URI` variable:
 
 ```
 SQLALCHEMY_DATABASE_URI=your_postgresql_uri_here
